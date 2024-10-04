@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scary Threatening Site</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            animation: flicker 1.5s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border: 5px solid #ff0000;
+            margin: 20px;
+            opacity: 0.9;
+            transition: transform 0.3s;
+            filter: grayscale(100%) brightness(0.7);
+        }
+        img:hover {
+            transform: scale(1.1);
+            filter: none;
+        }
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: #ff0000;
+            text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9);
+            animation: shake 0.5s infinite alternate;
+        }
+        @keyframes shake {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(-5deg); }
+        }
+        .time-warning {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            color: #ff0000;
+            text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="nigga1.jpg" alt="Scary Image 1">
+        <img src="nigga2.jpg" alt="Scary Image 2">
+        <div class="caption">نكمك يا عطاي تناكت عليك قضية وقت برك</div>
+        <div class="time-warning">You'll be fucked in 24 hours!</div>
+    </div>
+</body>
+</html>
